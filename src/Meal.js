@@ -1,6 +1,6 @@
 export const Meal = (props) => {
   const { name } = props.meal;
-  const { images } = props.meal;
+  const { image } = props.meal;
   const { description } = props.meal;
   const { price } = props.meal;
 
