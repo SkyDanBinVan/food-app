@@ -5,7 +5,7 @@ function Header() {
     return (
         <>
         <header>
-            <a href=""><img className="logo" src="/logo192.png" alt="loho" /></a>
+            <a href="/"><img className="logo" src="/logo192.png" alt="logo" /></a>
             <h1>Food App</h1>
         </header>
         </>

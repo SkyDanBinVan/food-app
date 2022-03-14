@@ -4,7 +4,7 @@ import "./Footer.css"
 function Footer() {
     return (
     <footer>
-        <p>By <a href="">Food App</a></p>
+        <p>By <a href="/">Food App</a></p>
     </footer>
     )
 }
