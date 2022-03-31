@@ -9,7 +9,7 @@ export default function Header() {
                 <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                     <Container>
                         <LinkContainer to="/">
-                            <Navbar.Brand><h1>Food App</h1></Navbar.Brand>
+                            <Navbar.Brand><h1 className="header">Food App</h1></Navbar.Brand>
                         </LinkContainer>
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">

@@ -1,23 +1,13 @@
 import React from 'react'
 import recipies from "../../data/recipies.json"
-// import { useEffect, useState } from 'react'
-// import axios from "axios"
 
-export default function FoodList() {
-    // const [recipiesList, setRecipiesList] = useState([])
+export default function FoodList(
+    {
+        title,
+        
+    }
+) {
 
-    // useEffect(() => {
-    //     recipeArray(5)
-    //     .then(res => setRecipiesList(res))
-    // })
-    // const recipeArray = async (count) => {
-    //     let recipies = []
-    //     for (let i = 0; i < count; i++) {
-    //         const res = await axios("http://www.themealdb.com/api/json/v1/1/random.php")
-    //         recipies.push(res.data.meals[0])
-    //     }
-    //     return recipies
-    // }
     let headers = [
         "Title",
         "Image",
