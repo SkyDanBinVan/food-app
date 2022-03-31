@@ -1,9 +1,11 @@
 import React from "react";
 import { CardGroup, Card } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
-import recipes from "../../data/recipes.json"
-export default function Foodcards() {
-
+export default function Foodcards(
+    {
+        recipes
+    }
+) {
     return (
         <CardGroup>
             {recipes.recipes.map(( item, index ) => 
