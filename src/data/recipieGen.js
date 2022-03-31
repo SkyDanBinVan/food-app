@@ -18,4 +18,4 @@ const main = async (count) => {
   console.log('writing to ' + fileName);
 });
 }
-main(1)
+main(5)

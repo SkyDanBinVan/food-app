@@ -1,3 +1,8 @@
 .hero {
-    height: 500px;
+    padding: 10px 50px;
+}
+
+.motto {
+    text-align: center;
+    font-size: 3em;
 }
