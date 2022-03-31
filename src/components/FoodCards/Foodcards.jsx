@@ -1,12 +1,14 @@
 import React from "react";
 import { CardGroup, Card } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
 import recipes from "../../data/recipes.json"
 export default function Foodcards() {
 
     return (
         <CardGroup>
             {recipes.recipes.map(( item, index ) => 
-            <Card key={index}>
+            <LinkContainer key={index} to={`/recipes/${item.idMeal}`}>
+            <Card>
                 <Card.Img variant="top" src={item.strMealThumb} width="100px"/>
                 <Card.Body>
                     <Card.Title>{item.strMeal}</Card.Title>
@@ -19,7 +21,8 @@ export default function Foodcards() {
                         Last updated 3 mins ago
                     </small>
                 </Card.Footer>
-            </Card>)}
+            </Card>
+            </LinkContainer>)}
         </CardGroup>
     );
 }
