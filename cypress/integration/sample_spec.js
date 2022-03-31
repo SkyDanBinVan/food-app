@@ -43,3 +43,11 @@ describe('navbar tests', () => {
         cy.should
     }) */
 })
+
+describe('recipe tests', () => {
+    it('can navigate to a recipe', () => {
+        cy.visit('/')
+        cy.contains('Carrot Cake').click()
+        cy.get('main').contains('For the carrot cake')
+    })
+})
