@@ -29,18 +29,18 @@ export default function Header() {
                                             Action
                                         </NavDropdown.Item>
                                     </LinkContainer>
-                                    <LinkContainer to="/">
+                                    <LinkContainer to="/2">
                                         <NavDropdown.Item>
                                             Another action
                                         </NavDropdown.Item>
                                     </LinkContainer>
-                                    <LinkContainer to="/">
+                                    <LinkContainer to="/3">
                                         <NavDropdown.Item>
                                             Something
                                         </NavDropdown.Item>
                                     </LinkContainer>
                                     <NavDropdown.Divider />
-                                    <LinkContainer to="/">
+                                    <LinkContainer to="/4">
                                         <NavDropdown.Item>
                                             Separated link
                                         </NavDropdown.Item>
