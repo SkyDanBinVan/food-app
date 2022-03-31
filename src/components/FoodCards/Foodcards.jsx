@@ -6,7 +6,7 @@ export default function Foodcards() {
     return (
         <CardGroup>
             {recipies.recipies.map(( item, index ) => 
-            <Card>
+            <Card key={index}>
                 <Card.Img variant="top" src={item.strMealThumb} width="100px"/>
                 <Card.Body>
                     <Card.Title>{item.strMeal}</Card.Title>

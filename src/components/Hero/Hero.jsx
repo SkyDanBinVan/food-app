@@ -1,13 +1,11 @@
 import React from 'react'
-import FoodList from '../FoodList/FoodList'
+import Foodcards from '../FoodCards/Foodcards'
 import "./Hero.css"
 
-
-
-function Main() {
+export default function Hero() {
     return (
-        <FoodList/>
+        <div className='hero'>
+            <Foodcards/>
+        </div>
     )
 }
-
-export default Main
