@@ -1,16 +1,17 @@
 import React from "react";
 import { CardGroup, Card } from "react-bootstrap";
+import recipies from "../../data/recipies.json"
 export default function Foodcards() {
+
     return (
         <CardGroup>
+            {recipies.recipies.map(( item, index ) => 
             <Card>
-                <Card.Img variant="top" src="holder.js/100px160" />
+                <Card.Img variant="top" src={item.strMealThumb} width="100px"/>
                 <Card.Body>
-                    <Card.Title>Card title</Card.Title>
+                    <Card.Title>{item.strMeal}</Card.Title>
                     <Card.Text>
-                        This is a wider card with supporting text below as a
-                        natural lead-in to additional content. This content is a
-                        little bit longer.
+                        {item.strArea} {item.strTags}
                     </Card.Text>
                 </Card.Body>
                 <Card.Footer>
@@ -18,39 +19,7 @@ export default function Foodcards() {
                         Last updated 3 mins ago
                     </small>
                 </Card.Footer>
-            </Card>
-            <Card>
-                <Card.Img variant="top" src="holder.js/100px160" />
-                <Card.Body>
-                    <Card.Title>Card title</Card.Title>
-                    <Card.Text>
-                        This card has supporting text below as a natural lead-in
-                        to additional content.{" "}
-                    </Card.Text>
-                </Card.Body>
-                <Card.Footer>
-                    <small className="text-muted">
-                        Last updated 3 mins ago
-                    </small>
-                </Card.Footer>
-            </Card>
-            <Card>
-                <Card.Img variant="top" src="holder.js/100px160" />
-                <Card.Body>
-                    <Card.Title>Card title</Card.Title>
-                    <Card.Text>
-                        This is a wider card with supporting text below as a
-                        natural lead-in to additional content. This card has
-                        even longer content than the first to show that equal
-                        height action.
-                    </Card.Text>
-                </Card.Body>
-                <Card.Footer>
-                    <small className="text-muted">
-                        Last updated 3 mins ago
-                    </small>
-                </Card.Footer>
-            </Card>
+            </Card>)}
         </CardGroup>
     );
 }

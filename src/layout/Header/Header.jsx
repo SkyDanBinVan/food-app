@@ -49,13 +49,13 @@ export default function Header() {
                             </Nav>
                             <Nav>
                                 <LinkContainer to="/">
-                                    <Nav.Link href="#deets">
+                                    <Nav.Link>
                                         More deets
                                     </Nav.Link>
                                 </LinkContainer>
-                                <LinkContainer to="/">
-                                    <Nav.Link eventKey={2} href="#memes">
-                                        Dank memes
+                                <LinkContainer to="/cards">
+                                    <Nav.Link>
+                                        Cards
                                     </Nav.Link>
                                 </LinkContainer>
                             </Nav>
