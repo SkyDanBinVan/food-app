@@ -1,11 +1,11 @@
 import React from "react";
 import { CardGroup, Card } from "react-bootstrap";
-import recipies from "../../data/recipies.json"
+import recipes from "../../data/recipes.json"
 export default function Foodcards() {
 
     return (
         <CardGroup>
-            {recipies.recipies.map(( item, index ) => 
+            {recipes.recipes.map(( item, index ) => 
             <Card key={index}>
                 <Card.Img variant="top" src={item.strMealThumb} width="100px"/>
                 <Card.Body>

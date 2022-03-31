@@ -1,10 +1,10 @@
 import React from 'react'
-import recipies from "../../data/recipies.json"
+import recipes from "../../data/recipes.json"
 
 export default function FoodList(
     {
         title,
-        
+
     }
 ) {
 
@@ -37,7 +37,7 @@ export default function FoodList(
                 </tr>
             </thead>
             <tbody>
-                {recipies.recipies.map(( item, index ) => <tr key={index}>
+                {recipes.recipes.map(( item, index ) => <tr key={index}>
                     <td>{item.strMeal}</td>
                     <td><img src={item.strMealThumb} alt="logo" width="100px"/></td>
                     <td>{item.strTags}</td>
