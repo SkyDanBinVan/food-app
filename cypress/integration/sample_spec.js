@@ -16,4 +16,30 @@ describe('My First Test', () => {
       expect(true).to.equal(true)
     })
   })
-  
+
+
+describe('navbar tests', () => {
+    it('can use navbar to go to home page', () => {
+        cy.visit('/features')
+        cy.contains('Food App').click()
+        cy.url().should('equal', Cypress.config().baseUrl)
+    })
+
+    it('can use navbar to go to features page', () => {
+        cy.visit('/')
+        cy.contains('Features').click()
+        cy.url().should('include', '/features')
+    })
+
+    it('can use navbar to go to pricing page', () => {
+        cy.visit('/')
+        cy.contains('Pricing').click()
+        cy.url().should('include', '/pricing')
+    })
+    /*
+    it('has navbar dropdown elements', () => {
+        cy.visit('/')
+        cy.contains('Dropdown').click()
+        cy.should
+    }) */
+})
