@@ -1,10 +1,13 @@
 import React from 'react'
+import { useParams } from 'react-router-dom';
 
 export default function FoodList(
     {
-        item
+        recipes
     }
 ) {
+    const { id } = useParams();
+    const item = recipes.recipes.find(element => element.idMeal === id)
     const ingredientIterator = (thing) => {
         let ingQuant = []
         for (let i = 0; i < 20; i++) {
