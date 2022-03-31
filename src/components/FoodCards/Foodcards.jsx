@@ -1,5 +1,5 @@
 import React from "react";
-import { CardGroup, Card } from "react-bootstrap";
+import { CardGroup, Card, Row } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 export default function Foodcards(
     {
@@ -7,11 +7,11 @@ export default function Foodcards(
     }
 ) {
     return (
-        <CardGroup>
+        <Row xs={1} md={3} className="g-4">
             {recipes.recipes.map(( item, index ) => 
             <LinkContainer key={index} to={`/recipes/${item.idMeal}`}>
             <Card>
-                <Card.Img variant="top" src={item.strMealThumb} width="100px"/>
+                <Card.Img variant="top" src={item.strMealThumb}/>
                 <Card.Body>
                     <Card.Title>{item.strMeal}</Card.Title>
                     <Card.Text>
@@ -25,6 +25,6 @@ export default function Foodcards(
                 </Card.Footer>
             </Card>
             </LinkContainer>)}
-        </CardGroup>
+        </Row>
     );
 }

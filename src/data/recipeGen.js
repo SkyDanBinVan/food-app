@@ -3,7 +3,7 @@ const fs = require('fs');
 const fileName = './recipes.json'
 const file = require(fileName);
 const recipeArray = async (count) => {
-    recipes = []
+    let recipes = []
     for (i = 0; i < count; i++) {
         res = await axios("http://www.themealdb.com/api/json/v1/1/random.php")
         recipes.push(res.data.meals[0])
@@ -18,4 +18,4 @@ const main = async (count) => {
   console.log('writing to ' + fileName);
 });
 }
-main(5)
+main(20)
