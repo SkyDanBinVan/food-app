@@ -10,6 +10,7 @@ export default function App() {
       <Layout>  
           <Routes>
               <Route path="/" element={<Hero />}></Route>
+              <Route path="/recipes/:id" element={<div>hello</div>}></Route>
           </Routes>
       </Layout>
     </>
