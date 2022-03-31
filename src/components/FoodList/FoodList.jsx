@@ -49,7 +49,7 @@ export default function FoodList() {
             <tbody>
                 {recipies.recipies.map(( item, index ) => <tr key={index}>
                     <td>{item.strMeal}</td>
-                    <td><img src={item.strMealThumb} alt="logo" /></td>
+                    <td><img src={item.strMealThumb} alt="logo" width="100px"/></td>
                     <td>{item.strTags}</td>
                     <td>{ingredientIterator(item).map(( item, index ) => <p key={index}>{item.ingredient} {item.quantity}</p>)}</td>
                     <td>{item.strInstructions}</td>
