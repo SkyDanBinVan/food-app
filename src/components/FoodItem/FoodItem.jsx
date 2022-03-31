@@ -1,21 +1,10 @@
 import React from 'react'
-import recipes from "../../data/recipes.json"
 
 export default function FoodList(
     {
-        title,
-
+        item
     }
 ) {
-
-    let headers = [
-        "Title",
-        "Image",
-        "Description",
-        "Ingredients",
-        "Recipe"
-
-    ]
     const ingredientIterator = (thing) => {
         let ingQuant = []
         for (let i = 0; i < 20; i++) {
@@ -27,24 +16,13 @@ export default function FoodList(
         }
         return ingQuant
     }
-    
-    const TableHeadItem = ({ item, index }) => <th key={index}>{item}</th>;
     return (
-        <table>
-            <thead>
-                <tr>
-                    {headers.map((item, index) => <TableHeadItem item={item} key={index}/>)}
-                </tr>
-            </thead>
-            <tbody>
-                {recipes.recipes.map(( item, index ) => <tr key={index}>
+                <div>
                     <td>{item.strMeal}</td>
                     <td><img src={item.strMealThumb} alt="logo" width="100px"/></td>
                     <td>{item.strTags}</td>
                     <td>{ingredientIterator(item).map(( item, index ) => <p key={index}>{item.ingredient} {item.quantity}</p>)}</td>
                     <td>{item.strInstructions}</td>
-                </tr>)}
-            </tbody>
-        </table>
+                </div>
     )
 }
